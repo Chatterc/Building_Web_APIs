@@ -1,4 +1,4 @@
 Pipfile*
 .vscode
 *__pycache__*
-tests\__pycache__
+tests\__pycache__*
