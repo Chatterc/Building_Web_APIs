@@ -17,3 +17,4 @@ response = requests.post("http://127.0.0.1:8000/predict/",
 print("Headers ", response.headers)
 print("Status Code ", response.status_code)
 print("Text ", response.text)
+print("Text ", response.json()['prediction'])

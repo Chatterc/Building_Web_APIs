@@ -25,7 +25,7 @@ class SolutionTestCase(unittest.TestCase):
                         )
         
         self.assertEqual(response.status_code, 200)
-        self.assertEqual(response.text['prediction'], 'Negative')
+        self.assertEqual(response.json()['prediction'], "Negative")
 
 
     def tearDown(self):
