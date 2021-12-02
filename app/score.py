@@ -3,22 +3,34 @@ from string import punctuation
 from typing import Dict, List
 from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
-import re  # regular expression
+import re 
 
+# load our trained model as a global variable
 global model
 model = joblib.load("./models/sentiment_ml_pipeline.pkl")
 
-# cleaning the data
+# function to preprocess & cleaning the data received from a client request
 def text_cleaning(text:str, remove_stop_words=True, lemmatize_words=True) -> List[str]:
-    # Clean the text, with the option to remove stop_words and to lemmatize word
+    """
+    A python function to preprocess incoming text data from a client request. 
+    This function performs the basic text preparation steps used in natural language processing.
 
-    # Clean the text
+    Args:
+        text (str): A string containing a corpus of text.
+        remove_stop_words (bool, optional): Remove stop words from the text. Defaults to True.
+        lemmatize_words (bool, optional): lemmatize words to their stem. Defaults to True.
+
+    Returns:
+        List[str]: A sanitized list of words to be used by the sentiment model
+    """
+ 
+    # Clean the text using regular expressions
     text = re.sub(r"[^A-Za-z0-9]", " ", text)
     text = re.sub(r"\'s", " ", text)
-    text = re.sub(r"http\S+", " link ", text)
+    text = re.sub(r"http\S+", " link ", text) # remove any web related links
     text = re.sub(r"\b\d+(?:\.\d+)?\s+", "", text)  # remove numbers
 
-    # Remove punctuation from text
+    # Remove punctuation from text using list comprehension
     text = "".join([c for c in text if c not in punctuation])
 
     # Optionally, remove stop words
