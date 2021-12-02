@@ -23,10 +23,10 @@ An __API__ (Applications Programming Interface) is a set of functions and proced
 1. Install the requirements.txt (see lecture)
 1. Run the Jupyter notebook that trains and produces a machine learning model in the `models` dir
 1. Create a Pydantic model to validate incoming data to our API (see lecture)
-1. Create a `main.py` that uses your pydantic models and inference pipeline (provided in `score.py`) to serve predictions
+1. Create a `main.py` that uses your pydantic model (`models.py`) and inference pipeline (provided in `score.py`) to serve predictions
 1. Run the sample payload script to ensure your machine learning web service works properly (the test case does the same thing)
 
-Deliverables:
-Homework - Demonstration of your progress setting up an ML webservice (1-2 minutes)
+#### Deliverables:
+Homework - Demonstration of your progress setting up an ML web service (1-2 minutes)
 Lab - Submitted lab must pass test case
 
