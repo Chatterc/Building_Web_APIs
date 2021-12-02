@@ -27,6 +27,6 @@ An __API__ (Applications Programming Interface) is a set of functions and proced
 1. Run the sample payload script to ensure your machine learning web service works properly (the test case does the same thing)
 
 #### Deliverables:
-Homework - Demonstration of your progress setting up an ML web service (1-2 minutes)
-Lab - Submitted lab must pass test case
+* Homework - Demonstration of your progress setting up an ML web service (1-2 minutes)
+* Lab - Submitted lab must pass test case to serve a single prediction
 
