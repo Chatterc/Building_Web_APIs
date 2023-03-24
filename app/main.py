@@ -1,10 +1,11 @@
 from fastapi import FastAPI
-from .score import predict_sentiment
-from .models import request_body
+from app.score import predict_sentiment
+from app.models import request_body
+
 
 app = FastAPI(
-    title='Stockton DSSA - Data Gathering & Warehousing',
-    description='Fall 2021 - Deploy Predictive Web Service'
+    title='Stockton DSSA',
+    description='Deploy Predictive Web Service',
     
 )
 
